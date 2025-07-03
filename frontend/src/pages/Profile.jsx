@@ -11,12 +11,12 @@ export default function Profile() {
     useEffect(() => {
         const fetchProfileAndStats = async () => {
             try {
-                const userRes = await axios.get("http://localhost:5000/api/auth/me", {
+                const userRes = await axios.get("https://code-buddy-5gmi.onrender.com/api/auth/me", {
                     withCredentials: true,
                 });
                 setUser(userRes.data);
 
-                const historyRes = await axios.get("http://localhost:5000/api/history", {
+                const historyRes = await axios.get("https://code-buddy-5gmi.onrender.com/api/history", {
                     withCredentials: true,
                 });
                 setHistory(historyRes.data);

@@ -25,7 +25,7 @@ export default function QuizForm({ onQuizFetched }) {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/generate-quiz", {
+      const response = await fetch("https://code-buddy-5gmi.onrender.com/api/generate-quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

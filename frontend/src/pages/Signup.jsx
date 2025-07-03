@@ -14,7 +14,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://code-buddy-5gmi.onrender.com/api/auth/signup",
         form,
         { withCredentials: true }
       );

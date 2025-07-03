@@ -9,7 +9,7 @@ export default function History() {
     useEffect(() => {
         const fetchHistory = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/history", {
+                const res = await axios.get("https://code-buddy-5gmi.onrender.com/api/history", {
                     withCredentials: true,
                 });
                 setHistory(res.data);
