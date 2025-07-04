@@ -12,6 +12,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 // CORS should be the first middleware
 app.use(cors({
   origin: [
