@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.post("https://code-buddy-5gmi.onrender.com/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("http://localhost:5000/api/auth/logout", {}, { withCredentials: true });
       toast.success("Logged out successfully");
       navigate("/login");
     } catch (err) {
@@ -22,7 +22,7 @@ export default function Navbar() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("https://code-buddy-5gmi.onrender.com/api/auth/me", {
+        const res = await axios.get("http://localhost:5000/api/auth/me", {
           withCredentials: true,
         });
         setUser(res.data);

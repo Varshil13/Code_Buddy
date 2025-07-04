@@ -59,7 +59,7 @@ export default function QuizDisplay({ rawQuiz, topic, difficulty, numQuestions }
     }));
     try {
       await axios.post(
-        "https://code-buddy-5gmi.onrender.com/api/submit",
+        "http://localhost:5000/api/submit",
         {
           score,
           questions: questionsToSend,

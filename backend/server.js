@@ -23,7 +23,7 @@ app.use(cors({
 
 
 // Handle preflight requests for all routes (Express expects a path, not a full URL)
-app.options('*', cors());
+
 
 app.use(cookieParser());
 app.use(express.json());
