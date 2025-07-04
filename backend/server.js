@@ -21,14 +21,9 @@ app.use(cors({
   credentials: true,
 }));
 
-// Handle preflight requests for all routes
-app.options('*', cors({
-  origin: [
-    "http://localhost:5173",
-    "https://code-buddy-frontend.onrender.com"
-  ],
-  credentials: true,
-}));
+
+// Handle preflight requests for all routes (Express expects a path, not a full URL)
+app.options('*', cors());
 
 app.use(cookieParser());
 app.use(express.json());
