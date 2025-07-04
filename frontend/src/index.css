@@ -1,5 +1,9 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* If you use tw-animate-css as a plugin, import it in tailwind.config.js plugins. Otherwise, add its styles below. */
 
 
 @custom-variant dark (&:is(.dark *));
