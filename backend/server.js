@@ -9,9 +9,10 @@ const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/authRoutes.js");
 
 require('dotenv').config();
+
 const app = express();
 
-app.use(cookieParser());
+// CORS should be the first middleware
 app.use(cors({
   origin: [
     "http://localhost:5173",
@@ -19,6 +20,17 @@ app.use(cors({
   ],
   credentials: true,
 }));
+
+// Handle preflight requests for all routes
+app.options('*', cors({
+  origin: [
+    "http://localhost:5173",
+    "https://code-buddy-frontend.onrender.com"
+  ],
+  credentials: true,
+}));
+
+app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
