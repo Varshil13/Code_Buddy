@@ -15,7 +15,6 @@ const app = express();
 // CORS should be the first middleware
 app.use(cors({
   origin: [
-    "http://localhost:5173",
     "https://code-buddy-frontend.onrender.com"
   ],
   credentials: true,
