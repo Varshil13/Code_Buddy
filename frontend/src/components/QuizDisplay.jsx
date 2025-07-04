@@ -59,7 +59,7 @@ export default function QuizDisplay({ rawQuiz, topic, difficulty, numQuestions }
     }));
     try {
       await axios.post(
-        "http://localhost:5000/api/submit",
+        `${import.meta.env.VITE_BACKEND_API}/api/submit`,
         {
           score,
           questions: questionsToSend,

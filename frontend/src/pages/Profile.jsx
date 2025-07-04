@@ -11,12 +11,12 @@ export default function Profile() {
     useEffect(() => {
         const fetchProfileAndStats = async () => {
             try {
-                const userRes = await axios.get("http://localhost:5000/api/auth/me", {
+                const userRes = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/auth/me`, {
                     withCredentials: true,
                 });
                 setUser(userRes.data);
 
-                const historyRes = await axios.get("http://localhost:5000/api/history", {
+                const historyRes = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/history`, {
                     withCredentials: true,
                 });
                 setHistory(historyRes.data);

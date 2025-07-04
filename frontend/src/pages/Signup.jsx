@@ -14,7 +14,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        `${import.meta.env.VITE_BACKEND_API}/api/auth/signup`,
         form,
         { withCredentials: true }
       );

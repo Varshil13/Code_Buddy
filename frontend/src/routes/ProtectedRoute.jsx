@@ -7,7 +7,7 @@ export default function ProtectedRoute({ children }) {
   const [auth, setAuth] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/auth/me", { withCredentials: true })
+    axios.get(`${import.meta.env.VITE_BACKEND_API}/api/auth/me`, { withCredentials: true })
       .then(() => setAuth(true))
       .catch(() => setAuth(false))
       .finally(() => setLoading(false));
