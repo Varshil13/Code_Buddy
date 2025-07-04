@@ -63,14 +63,14 @@ export default function Navbar() {
               <>
                 <Link
                   to="/"
-                  className="text-lg font-semibold hover:scale-110 transition-transform hover:text-pink-300"
+                  className="text-lg font-semibold text-white hover:scale-110 transition-transform hover:text-pink-300"
                   onClick={() => setMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   to="/history"
-                  className="text-lg font-semibold hover:scale-110 transition-transform hover:text-blue-300"
+                  className="text-lg font-semibold text-white hover:scale-110 transition-transform hover:text-blue-300"
                   onClick={() => setMenuOpen(false)}
                 >
                   History
@@ -78,7 +78,7 @@ export default function Navbar() {
                 {/* Profile link removed, now in username bubble */}
                 <button
                   onClick={handleLogout}
-                  className="text-lg font-semibold hover:scale-110 transition-transform hover:text-red-300"
+                  className="text-lg font-semibold text-white hover:scale-110 transition-transform hover:text-red-300"
                 >
                   Logout
                 </button>
@@ -96,14 +96,14 @@ export default function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="text-lg font-semibold hover:scale-110 transition-transform hover:text-indigo-200"
+                  className="text-lg font-semibold text-white hover:scale-110 transition-transform hover:text-indigo-200"
                   onClick={() => setMenuOpen(false)}
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="text-lg font-semibold hover:scale-110 transition-transform hover:text-pink-200"
+                  className="text-lg font-semibold text-white hover:scale-110 transition-transform hover:text-pink-200"
                   onClick={() => setMenuOpen(false)}
                 >
                   Signup

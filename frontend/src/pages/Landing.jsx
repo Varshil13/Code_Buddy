@@ -34,7 +34,7 @@ export default function Landing() {
                     <Link to="/login">
                         <Button
                             variant="outline"
-                            className="text-white border-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:bg-white hover:text-indigo-800 transition-all flex items-center gap-2"
+                            className="text-white border-white bg-slate-800 px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:bg-white hover:text-indigo-800 transition-all flex items-center gap-2"
                         >
                             <FaSignInAlt className="text-xl" />
                             Login
